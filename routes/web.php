@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->redirectTo('/test'); //view('welcome');
+});
+
+
+Route::group(['prefix' => '/test'], function () {
+    Route::get('/', 'PlaidController@index');
+    Route::post('/', 'PlaidController@getSecretToken');
 });

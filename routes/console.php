@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use TomorrowIdeas\Plaid\Plaid;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,11 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+Artisan::command('schedule:start', function () {
+    exec("schedule:run >> /dev/null 2>&1");
+});
+
+// Artisan::command('notif', function () {
+//     event(new App\Events\ExampleEvent(['berhasil' => true]));
+// });

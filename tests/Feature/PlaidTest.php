@@ -2,16 +2,18 @@
 
 namespace Tests\Unit;
 
+use Illuminate\Support\Facades\Request;
 use PHPUnit\Framework\TestCase;
+use Tests\Feature\PlaidCheckPage;
 
-class ExampleTest extends TestCase
+class PlaidTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testAccessPage()
     {
         $this->assertTrue(true);
     }
